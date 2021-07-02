@@ -1,4 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
+import { createConnection } from 'typeorm';
 import { AppService } from './app.service';
 
 @Controller()
@@ -7,6 +8,7 @@ export class AppController {
 
   @Get()
   getHello(): string {
+    createConnection();
     return this.appService.getHello();
   }
 }

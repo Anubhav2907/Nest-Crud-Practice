@@ -7,7 +7,6 @@ import { User } from './user.entity';
 
 @Entity()
 export class Note extends BaseEntity {
-  Approved = require('../../models/approvedAttendance');
   @PrimaryGeneratedColumn()
   id: number;
   @Column()
